@@ -3,7 +3,6 @@ spring:
     name: ticketing-project-rest
   profiles:
     active: default
-
   jpa:
     properties:
       hibernate:
