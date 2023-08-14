@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+     #false means don't want registering to eureka server,
+    register-with-eureka: false
+    fetch-registry: false
