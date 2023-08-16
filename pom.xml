@@ -33,7 +33,7 @@
         <spring-boot.version>2.7.11</spring-boot.version>
         <modelmapper.version>2.3.9</modelmapper.version>
         <lombok.version>1.18.22</lombok.version>
-        <spring-cloud.version>2.2.10.RELEASE</spring-cloud.version>
+        <spring-cloud.version>3.1.0</spring-cloud.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
 
