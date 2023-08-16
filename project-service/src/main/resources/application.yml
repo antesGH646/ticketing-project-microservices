@@ -12,9 +12,9 @@ spring:
       ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/ticketing-app
+    url: jdbc:postgresql://localhost:5432/ticketing
     username: postgres
-    password: admin
+    password:
     driver-class-name: org.postgresql.Driver
 server:
   port: 9091
