@@ -114,7 +114,7 @@
 
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>org.springframework.cloud.gateway</artifactId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
                 <version>${spring-cloud.version}</version>
             </dependency>
 
