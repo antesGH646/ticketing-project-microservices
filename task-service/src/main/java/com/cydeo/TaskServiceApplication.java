@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableFeignClients
-@EnableDiscoveryClient
+@EnableDiscoveryClient//specifying to register this service in the discovery service
 public class TaskServiceApplication {
 
     public static void main(String[] args) {

@@ -3,8 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!--specifies not to creat a jar file from this parent pom.xml    -->
     <packaging>pom</packaging>
 
+    <!-- listing all the services  -->
     <modules>
         <module>app-domain-model</module>
         <module>user-service</module>
@@ -36,8 +38,10 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>
 
+   <!-- This tag specifies that the following are the common parent dependencies   -->
     <dependencyManagement>
-
+     <!-- These are the common dependencies, if a service wants any of these
+     go the service's pom.xml and the dependency without the version tag -->
         <dependencies>
             <dependency>
                 <groupId>com.cydeo</groupId>
@@ -101,6 +105,8 @@
                 <version>${spring-cloud.version}</version>
             </dependency>
 
+           <!-- All the microservices and their instances are registered to eureka
+                through this dependency -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
