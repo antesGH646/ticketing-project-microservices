@@ -18,15 +18,18 @@ spring:
 server:
   port: 9090
 
+# eureka configuration
 eureka:
   instance:
     status-page-url-path: ${management.context-path}/info
     health-check-url-path: ${management.context-path}/health
   client:
     serviceUrl:
+      # eureka server runs in Docker not in localhost,
+      # so we tell it to register all the services to this url
       defaultZone: http://discovery-service:8761/eureka/
 
-
+#inforation about the health of each instances
 management:
   endpoint:
     health:
@@ -37,11 +40,11 @@ management:
         include: "*"
   context-path: http://localhost:${server.port}/actuator
 
-
 info:
   application:
     name: ${spring.application.name}
     description: Ticketing Application
+    # '@ -- @' means it is getting information from maven
     version: '@project.version@'
     spring-cloud-version: '@spring-cloud.version@'
     spring-boot-version: '@project.parent.version@'
