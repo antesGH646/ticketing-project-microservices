@@ -25,6 +25,7 @@
                     <groupId>com.netflix.ribbon</groupId>
                     <artifactId>ribbon-eureka</artifactId>
                 </exclusion>
+                <!--was added due to error, tips from stack overflow -->
                 <exclusion>
                     <groupId>javax.servlet</groupId>
                     <artifactId>servlet-api</artifactId>
@@ -39,6 +40,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--will create an image in the Docker with help of the spring-boot-maven-plugin-->
                 <configuration>
                     <image>
                         <name>${project.groupId}/discovery-service:${project.version}</name>

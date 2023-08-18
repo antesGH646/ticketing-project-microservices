@@ -20,6 +20,7 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+#to run all the services at once, the instance must be registered here
   userservice:
     image: ${GROUP_ID}/user-service:${SERVICE_VERSION:-latest}
     environment:

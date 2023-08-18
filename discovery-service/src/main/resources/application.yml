@@ -2,9 +2,12 @@ spring:
   cloud:
     loadbalancer:
       ribbon:
+        # do not want ribbon load balancer from Eureka server, instead wants to use from Docker
         enabled: false
 server:
+  #the Service discovery server will run on 8761 port
   port: 8761
+#wants to use the service discovery run in the Eureka server
 eureka:
   client:
     serviceUrl:

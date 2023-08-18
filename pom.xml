@@ -29,7 +29,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring-boot.version>2.7.11</spring-boot.version>
+        <spring-boot.version>2.6.5</spring-boot.version>
         <modelmapper.version>2.3.9</modelmapper.version>
         <lombok.version>1.18.22</lombok.version>
         <spring-cloud.version>3.1.0</spring-cloud.version>
@@ -93,6 +93,8 @@
                 <version>${spring-cloud.version}</version>
             </dependency>
 
+           <!-- Spring cloud provides two types netflix-eureka servers
+           the client side and the server side -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
@@ -105,6 +107,9 @@
                 <version>${spring-cloud.version}</version>
             </dependency>
 
+         <!-- actuator is used to provide service discovery registered instance's
+              health information Grafana from Spring cloud connects with the
+              actuator big xml file to display a UI information   -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-actuator</artifactId>
