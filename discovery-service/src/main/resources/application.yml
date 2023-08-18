@@ -4,11 +4,14 @@ spring:
       ribbon:
         enabled: false
 server:
+  #Eureka server runs on this port
   port: 8761
 eureka:
   client:
     serviceUrl:
+      #a docker image where the eureka server is running
       defaultZone: http://discovery-service:8761/eureka/
-     #false means don't want registering to eureka server,
+     # false means don't want discovery service registering
+     # or displaying among the list of registered services in the eureka server,
     register-with-eureka: false
     fetch-registry: false
