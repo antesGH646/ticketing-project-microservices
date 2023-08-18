@@ -13,6 +13,10 @@
         <module name="project-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="discovery-service" target="11" />
+      <module name="gateway-service" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
