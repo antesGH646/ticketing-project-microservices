@@ -8,6 +8,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+
       routes:
         - id: user-service
           uri: lb://user-service
@@ -31,6 +32,7 @@ spring:
 server:
   port: 8762
 
+#Eureka server configuration
 eureka:
   instance:
     status-page-url-path: ${management.context-path}/info
@@ -38,7 +40,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-service:8761/eureka/
-
 
 management:
   endpoint:
@@ -49,7 +50,6 @@ management:
       exposure:
         include: "*"
   context-path: http://localhost:${server.port}/actuator
-
 
 info:
   application:
