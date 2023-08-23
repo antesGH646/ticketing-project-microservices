@@ -1,11 +1,11 @@
 spring:
+  application:
+    name: project-service
   sleuth:
     sampler:
       probability: 1
   zipkin:
       base-url: http://host.docker.internal:9411
-  application:
-    name: ticketing-project-rest
   profiles:
     active: default
 
@@ -22,7 +22,7 @@ spring:
     password:
     driver-class-name: org.postgresql.Driver
 server:
-  port: 9091
+  port: 9092
 
 eureka:
   instance:
