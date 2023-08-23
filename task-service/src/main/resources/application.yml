@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ticketing-project-rest
+    name: task-service
   profiles:
     active: default
   jpa:
@@ -16,7 +16,7 @@ spring:
     password:
     driver-class-name: org.postgresql.Driver
 server:
-  port: 9092
+  port: 9093
 
 eureka:
   instance:
