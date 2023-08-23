@@ -30,6 +30,7 @@ spring:
             - RewritePath=/cydeo/dev/task/(?<segment>.*),/$\{segment}
   sleuth:
     sampler:
+      #  1 means registering 100% of the logs in the docker running in port 9411
       probability: 1
   zipkin:
       base-url: http://host.docker.internal:9411
