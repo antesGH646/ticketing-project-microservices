@@ -5,10 +5,11 @@ spring:
   cloud:
     gateway:
       discovery:
+        #gateway will be enabled to have the info of all the services registered in discovery service
         locator:
           enabled: true
           lower-case-service-id: true
-
+      #all the routes of the services
       routes:
         - id: user-service
           uri: lb://user-service
