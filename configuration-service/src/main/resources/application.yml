@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: configuration-service
+  profiles:
+#config server reading from file system ==> :8888/PropertiesFileName/nameAfterDash or /default for the default
+#    active: native
+    active: git
+  cloud:
+    config:
+      server:
+#        search-location: classpath:/config
+        git:
+          uri: https://github.com/antesGH646/ticketing-project-microservices-configuration
+          default-label: main
+          username: antesGH646
+          password: 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
+
+
+#config server is set to run on port 8888 by cloud
+server:
+  port: 8888
