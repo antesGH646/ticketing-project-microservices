@@ -13,8 +13,11 @@ spring:
           uri: https://github.com/antesGH646/ticketing-project-microservices-configuration
           default-label: main
           username: antesGH646
-          password: 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
+          password: '{cipher}11c1a0eb4421592f4d4913fa52971a70896067b7f9b033d56420bac609acee8d4e910f1241c11244dd2cec54156f0ff0efdea2c189fe7fc13f36e058fce3041'
+      fail-fast: true
 
+encrypt:
+  key: cydeo
 
 #config server is set to run on port 8888 by cloud
 server:

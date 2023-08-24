@@ -30,6 +30,9 @@ services:
     depends_on:
       database:
         condition: service_healthy
+      configserver:
+        condition: service_started
+    restart: on-failure
     ports:
       - "9091:9091"
     networks:
@@ -44,6 +47,9 @@ services:
     depends_on:
       database:
         condition: service_healthy
+      configserver:
+        condition: service_started
+    restart: on-failure
     ports:
       - "9092:9092"
     networks:
@@ -58,6 +64,9 @@ services:
     depends_on:
       database:
         condition: service_healthy
+      configserver:
+        condition: service_started
+    restart: on-failure
     ports:
       - "9093:9093"
     networks:
