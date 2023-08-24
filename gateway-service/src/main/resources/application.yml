@@ -15,19 +15,25 @@ spring:
           predicates:
             - Path=/cydeo/dev/user/**
           filters:
-            - RewritePath=/cydeo/dev/user/(?<segment>.*),/$\{segment}
+            - RewritePath=/user/(?<path>.*), /$\{path}
         - id: project-service
           uri: lb://project-service
           predicates:
             - Path=/cydeo/dev/project/**
           filters:
-            - RewritePath=/cydeo/dev/project/(?<segment>.*),/$\{segment}
+            - RewritePath=/project/(?<path>.*), /$\{path}
         - id: task-service
           uri: lb://task-service
           predicates:
             - Path=/cydeo/dev/task/**
           filters:
-            - RewritePath=/cydeo/dev/task/(?<segment>.*),/$\{segment}
+            - RewritePath=/task/(?<path>.*), /$\{path}
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/v3/api-docs/**
+          filters:
+            - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs
   sleuth:
     sampler:
       #  1 means registering 100% of the logs in the docker running in port 9411
