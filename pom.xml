@@ -188,6 +188,18 @@
                 <artifactId>spring-cloud-config-client</artifactId>
                 <version>${spring-cloud.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-webmvc-core</artifactId>
+                <version>${open-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-webflux-ui</artifactId>
+                <version>${open-api.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
